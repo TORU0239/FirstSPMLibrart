@@ -1,3 +1,3 @@
 # FirstSPMLibrart
 
-A description of this package.
+One of steps to be familiar with Swift Package Manager
