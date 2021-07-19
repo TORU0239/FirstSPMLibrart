@@ -8,10 +8,14 @@ let package = Package(
     platforms: [.iOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
+         .library(
             name: "FirstSPMLibrart",
             type: .dynamic,
             targets: ["FirstSPMLibrart"]),
+        .library(
+           name: "SecondSPMLibrary",
+           type: .static,
+           targets: ["SecondSPMLibrary"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -28,5 +32,11 @@ let package = Package(
         .testTarget(
             name: "FirstSPMLibrartTests",
             dependencies: ["FirstSPMLibrart"]),
+        .target(
+            name: "SecondSPMLibrary",
+            dependencies: []),
+        .testTarget(
+            name: "SecondSPMLibraryTests",
+            dependencies: []),
     ]
 )
